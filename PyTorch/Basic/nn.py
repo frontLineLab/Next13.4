@@ -14,8 +14,6 @@ class NeuralNetwork(nn.Module):
         )
 
     def forward(self, x):
-        # 入力画像を１次元配列にflatten
-        print('@@@')
         x = self.flatten(x)
         logits = self.linear_relu_stack(x)
         return logits
